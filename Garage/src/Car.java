@@ -6,7 +6,6 @@ public class Car extends Vehicle {
 	
 	public Car(int range, int steeringWheelRadius, int doors, String make, String model, int year, boolean isGas, int fuelCapacity) {
 		super(range, steeringWheelRadius, doors, make, model, year);
-		assert(doors == 2 || doors == 4);
 		this.isGas = isGas;
 		this.fuelCapacity = fuelCapacity;
 	}
