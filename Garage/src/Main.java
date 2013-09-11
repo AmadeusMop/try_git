@@ -11,7 +11,7 @@ public class Main {
 			;
 		}
 		System.out.println("\n\n\nA summary of your garage:\n");
-		System.out.println(garage.vehiclesSummary())
+		System.out.println(garage.vehiclesSummary());
 	}
 	
 	public static boolean constructVehicle(Scanner console) {
@@ -39,12 +39,12 @@ public class Main {
 				System.out.print("What is the turning radius of the " + vehicleType + "'s steering wheel? ");
 				radius = console.nextInt();
 				if(vehicleType.equals("car")) {
-					System.out.print("How many doors does the car have? ")
+					System.out.print("How many doors does the car have? ");
 					doors = console.nextInt();
 					do {
 						System.out.print("What type of engine does the car have? (Gasoline, Electric) ");
-						engineType = console.next().toLowerCase;
-					} while !(engineType.equals("gasoline") || engineType.equals("electric"));
+						engineType = console.next().toLowerCase();
+					} while (!(engineType.equals("gasoline") || engineType.equals("electric")));
 					isGas = engineType.equals("gasoline");
 					System.out.print("How many " + (isGas ? "gallons of gas" : "kilowatts") + " can the " + (isGas ? "fuel tank" : "car's battery") + " hold? ");
 					fuelCapacity = console.nextInt();
@@ -55,9 +55,10 @@ public class Main {
 				garage.addVehicle(newVehicle);
 				return true;
 			} else {
-				System.out.println("Sorry, \"" + vehicleType + "\" isn't a valid vehicle.")
+				System.out.println("Sorry, \"" + vehicleType + "\" isn't a valid vehicle.");
 			}
 		}
+		return false;
 	}
 
 }
