@@ -6,6 +6,10 @@ public abstract class Vehicle {
 	private String model;
 	private int year;
 	
+	public Vehicle() {
+		this(0, 0, 2, "None", "None", 0);
+	}
+	
 	public Vehicle(int range, int steeringWheelRadius, int doors, String make, String model, int year) {
 		this.doors = doors;
 		this.make = make;

@@ -19,10 +19,10 @@ public class Main {
 		String make, model, engineType;
 		boolean isGas;
 		String vehicleType = "";
-		System.out.println("What type of vehicle do you want to add?");
-		System.out.print("(Car, Boat, None): ");
-		vehicleType = console.next().toLowerCase();
 		do {
+			System.out.println("What type of vehicle do you want to add?");
+			System.out.print("(Car, Boat, None): ");
+			vehicleType = console.next().toLowerCase();
 			if(vehicleType.equals("none")) {
 				return false;
 			} else if(vehicleType.equals("car") || vehicleType.equals("boat")) { 
