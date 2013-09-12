@@ -19,7 +19,8 @@ public class GarageTest {
 		assertEquals("Garage size", 3, g.size());
 		g.removeVehicle(c1);
 		assertEquals("Garage size", 2, g.size());
-		g.removeVehicle(b);
+		assertEquals("Removing existing vehicles", true, g.removeVehicle(b));
+		assertEquals("Removing nonexistent vehicles", false, g.removeVehicle(c2));
 		assertEquals("Garage summmary", c1.getDetails()+"\n", g.vehiclesSummary());
 	}
 
