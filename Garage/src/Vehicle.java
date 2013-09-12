@@ -1,17 +1,11 @@
 public abstract class Vehicle {
 	private int range;
 	private int steeringWheelRadius;
-	private int doors;
 	private String make;
 	private String model;
 	private int year;
 	
-	public Vehicle() {
-		this(0, 0, 2, "None", "None", 0);
-	}
-	
-	public Vehicle(int range, int steeringWheelRadius, int doors, String make, String model, int year) {
-		this.doors = doors;
+	public Vehicle(int range, int steeringWheelRadius, String make, String model, int year) {
 		this.make = make;
 		this.model = model;
 		this.year = year;
@@ -23,10 +17,6 @@ public abstract class Vehicle {
 	
 	public int getSteeringWheelRadius() {
 		return steeringWheelRadius;
-	}
-	
-	public int getDoors() {
-		return doors;
 	}
 	
 	public String getMake() {
@@ -46,7 +36,6 @@ public abstract class Vehicle {
 		output += "Make:\t" + getMake() + "\n";
 		output += "Model:\t" + getModel() + "\n";
 		output += "Year:\t" + getYear() + "\n";
-		output += "Doors:\t" + getDoors() + "\n";
 		output += "Range:\t" + getRange() + "\n";
 		return output;
 	}

@@ -1,17 +1,23 @@
 
 public class Car extends Vehicle {
 	
-	boolean isGas;
-	int fuelCapacity;
+	private boolean isGas;
+	private int fuelCapacity;
+	private int doors;
 	
 	public Car() {
-		this(0, 0, 4, "None", "None", 0, true, 0);
+		this(0, 0, "None", "None", 0, 4, true, 0);
 	}
 	
-	public Car(int range, int steeringWheelRadius, int doors, String make, String model, int year, boolean isGas, int fuelCapacity) {
-		super(range, steeringWheelRadius, doors, make, model, year);
+	public Car(int range, int steeringWheelRadius, String make, String model, int year, int doors, boolean isGas, int fuelCapacity) {
+		super(range, steeringWheelRadius, make, model, year);
+		this.doors = doors;
 		this.isGas = isGas;
 		this.fuelCapacity = fuelCapacity;
+	}
+	
+	public int getDoors() {
+		return doors;
 	}
 	
 	public boolean isGas() {
@@ -25,6 +31,8 @@ public class Car extends Vehicle {
 	public String getDetails() {
 		String output = "Car\n";
 		output += super.getDetails();
+		output += "Doors:\t";
+		output += getDoors();
 		output += "Engine:\t";
 		if(isGas()) {
 			output += "Gasoline";

@@ -48,7 +48,7 @@ public class Main {
 					isGas = engineType.equals("gasoline");
 					System.out.print("How many " + (isGas ? "gallons of gas" : "kilowatts") + " can the " + (isGas ? "fuel tank" : "car's battery") + " hold? ");
 					fuelCapacity = console.nextInt();
-					newVehicle = new Car(range, radius, doors, make, model, year, isGas, fuelCapacity);
+					newVehicle = new Car(range, radius, make, model, year, doors, isGas, fuelCapacity);
 				} else {
 					newVehicle = new Boat(range, radius, make, model, year);
 				}
