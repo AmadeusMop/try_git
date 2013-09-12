@@ -20,7 +20,7 @@ public class Car extends Vehicle {
 	
 	public String getDetails() {
 		String output = super.getDetails();
-		output += "Engine Type:\t";
+		output += "Engine:\t";
 		if(isGas()) {
 			output += "Gasoline";
 		} else {

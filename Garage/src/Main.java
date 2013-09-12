@@ -22,7 +22,7 @@ public class Main {
 		System.out.println("What type of vehicle do you want to add?");
 		System.out.print("(Car, Boat, None): ");
 		vehicleType = console.next().toLowerCase();
-		while(!(vehicleType.equals("car") || vehicleType.equals("boat") || vehicleType.equals("none"))) {
+		do {
 			if(vehicleType.equals("none")) {
 				return false;
 			} else if(vehicleType.equals("car") || vehicleType.equals("boat")) { 
@@ -36,7 +36,7 @@ public class Main {
 				model = console.next();
 				System.out.print("What is the range of the " + vehicleType + ", in miles? ");
 				range = console.nextInt();
-				System.out.print("What is the turning radius of the " + vehicleType + "'s steering wheel? ");
+				System.out.print("What is the turning radius, in degrees, of the " + vehicleType + "'s steering wheel? ");
 				radius = console.nextInt();
 				if(vehicleType.equals("car")) {
 					System.out.print("How many doors does the car have? ");
@@ -57,7 +57,7 @@ public class Main {
 			} else {
 				System.out.println("Sorry, \"" + vehicleType + "\" isn't a valid vehicle.");
 			}
-		}
+		} while(!(vehicleType.equals("car") || vehicleType.equals("boat") || vehicleType.equals("none")));
 		return false;
 	}
 
