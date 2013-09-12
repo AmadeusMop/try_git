@@ -13,6 +13,18 @@ public class Garage {
 		garage.add(vehicle);
 	}
 	
+	public boolean containsVehicle(Vehicle vehicle) { //Only used for testing
+		return garage.contains(vehicle);
+	}
+	
+	public boolean removeVehicle(Vehicle vehicle) { //Only used for testing
+		return garage.remove(vehicle);
+	}
+	
+	public int size() {
+		return garage.size();
+	}
+	
 	public String vehiclesSummary() {
 		String summary = "";
 		Iterator<Vehicle> iter = garage.iterator();

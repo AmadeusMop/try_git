@@ -2,7 +2,6 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-
 public class BoatTest {
 
 	@Test
@@ -12,7 +11,7 @@ public class BoatTest {
 		assertEquals("Can get make", "None", b.getMake());
 	}
 	
-@Test
+	@Test
 	
 	public void defaultConstructor() { 
 		Boat b = new Boat();
