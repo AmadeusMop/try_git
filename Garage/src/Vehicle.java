@@ -6,6 +6,8 @@ public abstract class Vehicle {
 	private int year;
 	
 	public Vehicle(int range, int steeringWheelRadius, String make, String model, int year) {
+		this.range = range;
+		this.steeringWheelRadius = steeringWheelRadius;
 		this.make = make;
 		this.model = model;
 		this.year = year;
