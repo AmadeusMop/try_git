@@ -2,10 +2,10 @@
 public class Boat extends Vehicle {
 	
 	public Boat() {
-		this(0, 0, "None", "None", 0);
+		this(0, "None", "None", 0, 0);
 	}
 	
-	public Boat(int range, int steeringWheelRadius, String make, String model, int year) {
+	public Boat(int steeringWheelRadius, String make, String model, int year, int range) {
 		super(steeringWheelRadius, make, model, year);
 		this.range = range;
 	}

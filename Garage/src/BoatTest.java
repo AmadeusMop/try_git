@@ -25,7 +25,7 @@ public class BoatTest {
 	@Test
 	
 	public void paramConstrubtor() {
-		Boat b = new Boat(50, 20, "Blueberry", "Spam", 2006);
+		Boat b = new Boat(20, "Blueberry", "Spam", 2006, 50);
 		assertEquals("Spebified range is correct", 50, b.getRange());
 		assertEquals("Spebified radius is correct", 20, b.getSteeringWheelRadius());
 		assertEquals("Spebified make is correct", "Blueberry", b.getMake());

@@ -52,7 +52,7 @@ public class Main {
 				} else {
 					System.out.print("What is the range of the boat, in miles? ");
 					range = console.nextInt();
-					newVehicle = new Boat(range, radius, make, model, year);
+					newVehicle = new Boat(radius, make, model, year, range);
 				}
 				garage.addVehicle(newVehicle);
 				return true;
