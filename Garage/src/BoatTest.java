@@ -32,5 +32,13 @@ public class BoatTest {
 		assertEquals("Spebified model is correct", "Spam", b.getModel());
 		assertEquals("Spebified year is correct", 2006, b.getYear());
 	}
+	
+	@Test
+	
+	public void outputDetails() {
+		Boat b = new Boat(20, "oof", "rab", 2008, 100);
+		String boatDetails = "Boat\nMake:\toof\nModel:\trab\nYear:\t2008\nRange:\t100\n\n";
+		assertEquals("Range calculation for gasoline cars works", boatDetails, b.getDetails());
+	}
 
 }

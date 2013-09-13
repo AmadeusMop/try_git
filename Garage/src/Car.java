@@ -40,6 +40,7 @@ public class Car extends Vehicle {
 		output += super.getDetails();
 		output += "Doors:\t";
 		output += getDoors();
+		output += "\n";
 		output += "Engine:\t";
 		if(isGas()) {
 			output += "Gasoline";

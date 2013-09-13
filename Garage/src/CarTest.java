@@ -41,7 +41,27 @@ public class CarTest {
 		assertEquals("Specified number of doors is correct", 2, c.getDoors());
 		assertEquals("Specified engine type is correct", false, c.isGas());
 		assertEquals("Specified fuel capacity is correct", 5, c.getFuelCapacity());
-		assertEquals("Default fuel efficiency is correct", 20, c.getFuelEfficiency());
+		assertEquals("Specified fuel efficiency is correct", 20, c.getFuelEfficiency());
+	}
+	
+	@Test
+	
+	public void rangeCalculation() {
+		Car gasCar = new Car(20, "oof", "rab", 2008, 4, true, 5, 20);
+		Car electricCar = new Car(20, "oof", "rab", 2008, 4, false, 5, 20);
+		assertEquals("Range calculation for gasoline cars works", 100, gasCar.getRange());
+		assertEquals("Range calculation for electric cars works", 70, electricCar.getRange());
+	}
+	
+	@Test
+	
+	public void outputDetails() {
+		Car gasCar = new Car(20, "oof", "rab", 2008, 4, true, 5, 20);
+		Car electricCar = new Car(20, "oof", "rab", 2008, 4, false, 5, 20);
+		String gasDetails = "Car\nMake:\toof\nModel:\trab\nYear:\t2008\nRange:\t100\nDoors:\t4\nEngine:\tGasoline\n\n";
+		String electricDetails = "Car\nMake:\toof\nModel:\trab\nYear:\t2008\nRange:\t70\nDoors:\t4\nEngine:\tElectric\n\n";
+		assertEquals("Range calculation for gasoline cars works", gasDetails, gasCar.getDetails());
+		assertEquals("Range calculation for electric cars works", electricDetails, electricCar.getDetails());
 	}
 
 }
