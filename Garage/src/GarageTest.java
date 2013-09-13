@@ -21,7 +21,23 @@ public class GarageTest {
 		assertEquals("Garage size", 2, g.size());
 		assertEquals("Removing existing vehicles", true, g.removeVehicle(b));
 		assertEquals("Removing nonexistent vehicles", false, g.removeVehicle(c2));
-		assertEquals("Garage summmary", c1.getDetails()+"\n", g.vehiclesSummary());
+	}
+	
+	@Test
+	
+	public void Summary() {
+		Garage g = new Garage();
+		Car c = new Car();
+		Boat b = new Boat();
+		
+		g.addVehicle(c);
+		g.addVehicle(b);
+		
+		assertEquals("Garage summmary", c.getDetails()+b.getDetails(), g.vehiclesSummary());
+		
+		g.removeVehicle(b);
+		
+		assertEquals("Garage summary", c.getDetails(), g.vehiclesSummary());
 	}
 
 }

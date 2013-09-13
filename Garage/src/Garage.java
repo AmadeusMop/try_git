@@ -30,7 +30,6 @@ public class Garage {
 		Iterator<Vehicle> iter = garage.iterator();
 		while(iter.hasNext()) {
 			summary += iter.next().getDetails();
-			summary += "\n";
 		}
 		return summary;
 	}

@@ -13,6 +13,7 @@ public class Boat extends Vehicle {
 	public String getDetails() {
 		String output = "Boat\n";
 		output += super.getDetails();
+		output += "\n";
 		return output;
 	}
 

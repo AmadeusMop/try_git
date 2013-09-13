@@ -26,6 +26,7 @@ public class CarTest {
 		assertEquals("Default number of doors is correct", 4, c.getDoors());
 		assertEquals("Default engine type is correct", true, c.isGas());
 		assertEquals("Default fuel capacity is correct", 0, c.getFuelCapacity());
+		assertEquals("Default fuel efficiency is correct", 0, c.getFuelEfficiency());
 	}
 	
 	@Test
@@ -40,6 +41,7 @@ public class CarTest {
 		assertEquals("Specified number of doors is correct", 2, c.getDoors());
 		assertEquals("Specified engine type is correct", false, c.isGas());
 		assertEquals("Specified fuel capacity is correct", 5, c.getFuelCapacity());
+		assertEquals("Default fuel efficiency is correct", 20, c.getFuelEfficiency());
 	}
 
 }

@@ -46,7 +46,7 @@ public class Car extends Vehicle {
 		} else {
 			output += "Electric";
 		}
-		output += "\n";
+		output += "\n\n";
 		return output;
 	}
 
