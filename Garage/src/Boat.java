@@ -6,7 +6,8 @@ public class Boat extends Vehicle {
 	}
 	
 	public Boat(int range, int steeringWheelRadius, String make, String model, int year) {
-		super(range, steeringWheelRadius, make, model, year);
+		super(steeringWheelRadius, make, model, year);
+		this.range = range;
 	}
 	
 	public String getDetails() {

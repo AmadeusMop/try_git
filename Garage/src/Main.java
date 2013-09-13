@@ -15,7 +15,7 @@ public class Main {
 	}
 	
 	public static boolean constructVehicle(Scanner console) {
-		int range, radius, doors, year, fuelCapacity;
+		int range, radius, doors, year, fuelCapacity, fuelEfficiency;
 		String make, model, engineType;
 		boolean isGas;
 		String vehicleType = "";
@@ -34,8 +34,6 @@ public class Main {
 				make = console.next();
 				System.out.print("What is the model of the " + vehicleType + "? ");
 				model = console.next();
-				System.out.print("What is the range of the " + vehicleType + ", in miles? ");
-				range = console.nextInt();
 				System.out.print("What is the turning radius, in degrees, of the " + vehicleType + "'s steering wheel? ");
 				radius = console.nextInt();
 				if(vehicleType.equals("car")) {
@@ -48,8 +46,12 @@ public class Main {
 					isGas = engineType.equals("gasoline");
 					System.out.print("How many " + (isGas ? "gallons of gas" : "kilowatts") + " can the " + (isGas ? "fuel tank" : "car's battery") + " hold? ");
 					fuelCapacity = console.nextInt();
-					newVehicle = new Car(range, radius, make, model, year, doors, isGas, fuelCapacity);
+					System.out.print("How many miles per " + (isGas ? "gallon" : "kilowatt hour") + "does the car get?");
+					fuelEfficiency = console.nextInt();
+					newVehicle = new Car(radius, make, model, year, doors, isGas, fuelCapacity, fuelEfficiency);
 				} else {
+					System.out.print("What is the range of the boat, in miles? ");
+					range = console.nextInt();
 					newVehicle = new Boat(range, radius, make, model, year);
 				}
 				garage.addVehicle(newVehicle);

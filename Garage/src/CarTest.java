@@ -31,8 +31,8 @@ public class CarTest {
 	@Test
 	
 	public void paramConstructor() {
-		Car c = new Car(50, 20, "Blueberry", "Spam", 2006, 2, false, 5);
-		assertEquals("Specified range is correct", 50, c.getRange());
+		Car c = new Car(20, "Blueberry", "Spam", 2006, 2, false, 5, 20);
+		assertEquals("Specified range is correct", 70, c.getRange());
 		assertEquals("Specified radius is correct", 20, c.getSteeringWheelRadius());
 		assertEquals("Specified make is correct", "Blueberry", c.getMake());
 		assertEquals("Specified model is correct", "Spam", c.getModel());

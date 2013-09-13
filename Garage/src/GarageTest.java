@@ -6,11 +6,11 @@ public class GarageTest {
 
 	@Test
 	
-	public void VehicleAdding() {
+	public void VehicleAddingAndRemoving() {
 		Garage g = new Garage();
 		Car c1 = new Car();
 		Boat b = new Boat();
-		Car c2 = new Car(50, 20, "Blueberry", "Spam", 2006, 2, false, 5);
+		Car c2 = new Car(20, "Blueberry", "Spam", 2006, 2, false, 5, 20);
 		
 		g.addVehicle(c1);
 		assertEquals("Garage size", 1, g.size());
