@@ -62,5 +62,4 @@ public class Main {
 		} while(!(vehicleType.equals("car") || vehicleType.equals("boat") || vehicleType.equals("none")));
 		return false;
 	}
-
 }
