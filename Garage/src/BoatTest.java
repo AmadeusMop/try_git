@@ -26,11 +26,11 @@ public class BoatTest {
 	
 	public void paramConstrubtor() {
 		Boat b = new Boat(20, "Blueberry", "Spam", 2006, 50);
-		assertEquals("Spebified range is correct", 50, b.getRange());
-		assertEquals("Spebified radius is correct", 20, b.getSteeringWheelRadius());
-		assertEquals("Spebified make is correct", "Blueberry", b.getMake());
-		assertEquals("Spebified model is correct", "Spam", b.getModel());
-		assertEquals("Spebified year is correct", 2006, b.getYear());
+		assertEquals("Specified range is correct", 50, b.getRange());
+		assertEquals("Specified radius is correct", 20, b.getSteeringWheelRadius());
+		assertEquals("Specified make is correct", "Blueberry", b.getMake());
+		assertEquals("Specified model is correct", "Spam", b.getModel());
+		assertEquals("Specified year is correct", 2006, b.getYear());
 	}
 	
 	@Test
